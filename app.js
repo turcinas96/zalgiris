@@ -54,11 +54,14 @@ function renderGamesTable(actualByDate) {
     if (resultA) totalA += resultA.points;
     if (resultB) totalB += resultB.points;
 
+    const matchup = game.homeAway === "home"
+      ? `${DATA.team} - ${game.opponent}`
+      : `${game.opponent} - ${DATA.team}`;
+
     const tr = document.createElement("tr");
     tr.innerHTML = `
       <td>${game.date}</td>
-      <td>${game.opponent}</td>
-      <td>${game.homeAway === "home" ? "H" : "A"}</td>
+      <td>${matchup}</td>
       ${renderScoreCell(game.predictions.a, actual)}
       <td>${actualLabel}</td>
       ${renderScoreCell(game.predictions.b, actual)}
