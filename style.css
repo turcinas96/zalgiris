@@ -111,6 +111,23 @@ td.prediction.exact { color: var(--exact); font-weight: 700; }
 td.prediction.winner { color: var(--winner); font-weight: 700; }
 td.prediction.wrong { color: var(--wrong); }
 
+.score-input {
+  width: 36px;
+  padding: 2px 4px;
+  text-align: center;
+  background: var(--bg);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  font: inherit;
+}
+
+.score-input::-webkit-inner-spin-button,
+.score-input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 .page-footer {
   text-align: center;
   color: var(--muted);

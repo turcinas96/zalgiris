@@ -5,7 +5,12 @@ EuroLeague games, compared against the live actual results.
 
 ## How it works
 
-- Edit [data.js](data.js) to add upcoming games and each person's predicted score.
+- Edit [data.js](data.js) to add upcoming games and each person's predicted score,
+  or type directly into the score boxes on the page.
+- Scores typed into the page are saved in your browser's local storage, so they
+  persist for you across visits, but are **not shared with the other person's
+  browser** (there's no shared backend). Use `data.js` if you want the same
+  starting predictions to show for everyone.
 - Actual results are fetched automatically from ESPN's EuroLeague schedule for
   Zalgiris Kaunas and matched to your games by date.
 - Points are awarded once a game is completed:
